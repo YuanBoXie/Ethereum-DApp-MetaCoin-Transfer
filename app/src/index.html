@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MetaCoin | 以太坊应用开发案例：加密货币转账</title>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+    <h1>MetaCoin | 以太坊应用开发案例：加密货币转账</h1>
+    <p>Your account <strong class="account">loading...</strong> have <strong class="balance">loading...</strong> META</p>
+
+    <p><button onclick="App.refreshBalance()">刷新余额</button></p>
+
+    <h1>MetaCoin 转账</h1>
+
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" placeholder="e.g. 95" />
+
+    <label for="receiver">To address:</label>
+    <input
+      type="text"
+      id="receiver"
+      placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
+    />
+
+    <button onclick="App.sendCoin()">转账</button>
+
+    <p id="status"></p>
+    
+    <p>
+      <strong>Hint:</strong> open the browser developer console to view any
+      errors and warnings.
+    </p>
+    <script src="index.js"></script>
+  </body>
+</html>
